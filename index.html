@@ -393,9 +393,63 @@
         
           
         
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/posts/4d70ad40.html">
+        Hexo设置永久链接
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        安装插件在hexo根目录打开 git bash 安装插件
+npm install hexo-abbrlink --save
+配置修改根目录站点配置文件_config.yml，改为：
+url: http://zengxinxin.cn  #填写个人绑定的网站，否则无法进站
+permalink: posts/:abbrlink.html
+abbrlink:
+  alg: crc32  # 算法：...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time>2020-12-25</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Hexo%E6%95%99%E7%A8%8B/">Hexo教程</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/posts/4d70ad40.html'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -523,12 +577,51 @@
   
     
     
+  
+
+  <section class="widget category shadow desktop">
+    
+  <header>
+    
+      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/Hexo%E6%95%99%E7%A8%8B/" href="/categories/Hexo%E6%95%99%E7%A8%8B/"
+            id="categoriesHexoE69599E7A88B"
+            ><div class='name'>Hexo教程</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
 
   
 
   
     
     
+  
+
+  <section class="widget tagcloud shadow desktop mobile">
+    
+  <header>
+    
+      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/tags/%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6-%E9%85%8D%E7%BD%AE/" style="font-size: 14px; color: #999">-安装插件 -配置</a>
+    </div>
+  </section>
+
 
   
 
