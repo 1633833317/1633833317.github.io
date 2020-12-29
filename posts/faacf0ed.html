@@ -5,10 +5,6 @@
   <!-- SEO相关 -->
   
     
-      
-        <meta name="robots" content="index,follow">
-      
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -23,7 +19,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>Love me, love my dog.</title>
+  <title>Hexo分类和标签无法显示问题 - Love me, love my dog.</title>
+  
+    <meta name="keywords" content="hexo问题合集">
   
 
   
@@ -58,7 +56,7 @@
 <body>
   
 
-<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -309,7 +307,7 @@
     <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  dock' style="display: ;">
+        <div id="full" class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg"></div>
           
@@ -374,7 +372,7 @@
   </div>
 </div>
 
-          <div id="scroll-down" style="display: ;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
         </div>
     
   
@@ -385,212 +383,243 @@
         
 
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-          
-        
-          
-        
-          
-        
-      
+
+
+  
+  <div class="article-meta" id="top">
     
     
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
     
-    <h2 class="article-title" >
-      <a href="/posts/faacf0ed.html">
+      <h1 class="title">
         Hexo分类和标签无法显示问题
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
+      </h1>
+      <div class='new-meta-box'>
         
-壹 -下面以添加tag页面为例：
-需要在hexo根目录的source文件夹下新建一个tags文件夹，然后在tags文件夹里面新建一个index.md文件。快捷命令为: 
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>zengxin</p>
+  </a>
+</div>
 
-$ hexo new page &quot;tags&quot;
-
-贰 -编辑index.md文件
-首部内容示例：
-
-—title: “tags”type: tagslayout: “tags”—
-
-重点注意！
-
-这里面...
-      
-    
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Hexo%E6%95%99%E7%A8%8B/">Hexo教程</a>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+
+
+          
         
-        <time>2020-12-29</time>
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Dec 29, 2020</p>
+  </a>
+</div>
+
+          
         
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Hexo%E6%95%99%E7%A8%8B/">Hexo教程</a>
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Hexo分类和标签无法显示问题" data-path="/posts/faacf0ed.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  <p><img src="https://s3.ax1x.com/2020/12/29/rHIAnf.jpg" class="lazyload" data-srcset="https://s3.ax1x.com/2020/12/29/rHIAnf.jpg" srcset="data:image/png;base64,666" alt="首图"></p>
+<h2 id="壹"><a href="#壹" class="headerlink" title="壹"></a>壹</h2><p> -下面以添加tag页面为例：</p>
+<p>需要在hexo根目录的source文件夹下新建一个tags文件夹，然后在tags文件夹里面新建一个index.md文件。<br>快捷命令为: </p>
+<blockquote>
+<p><code>$ hexo new page &quot;tags&quot;</code></p>
+</blockquote>
+<h2 id="贰"><a href="#贰" class="headerlink" title="贰"></a>贰</h2><p> -编辑index.md文件</p>
+<p>首部内容示例：</p>
+<blockquote>
+<p><em>—</em><br>title: “tags”<br>type: tags<br>layout: “tags”<br><em>—</em></p>
+</blockquote>
+<p><font color="red"><strong>重点注意！</strong></font></p>
+<blockquote>
+<p>这里面最重要的就是<font color="blue"> <em>layout 选项</em>，</font><br>后面的参数对应的是你主题文件夹(themes文件夹)下<font color="blue"> <em>layout文件夹</em></font>下第一级的布局文件。<br>比如，我的主题是用ejs写的，那么对应的就是<font color="blue">layout/tags.ejs</font><br>如果没有，那么就会出现空白的现象！<br>如果你的tags文件的命名时<font color="blue">tag.ejs</font><br>那么你就应该写成 <font color="blue">layout: “tag”</font></p>
+</blockquote>
+<h2 id="叁"><a href="#叁" class="headerlink" title="叁"></a>叁</h2><p> -主题配置</p>
+<p>在菜单中添加链接。编辑主题配置文件（<font color="blue">themes\你的主题\ _config.yml</font>） ，添加 tags 到 menu 中</p>
+<blockquote>
+<p>menu:<br>  home: /<br>  archives: /archives<br>  tags: /tags</p>
+</blockquote>
+<h2 id="肆"><a href="#肆" class="headerlink" title="肆"></a>肆</h2><p>  -编辑hexo配置文件</p>
+<p>配置Directory选项<br>检查一下名称是否对应</p>
+<blockquote>
+<p>Directory<br>tag_dir: tags</p>
+</blockquote>
+<p>最重要的就是看一下你的主题文件里有没有标签页或者分类页的布局文件，一般来说都是有的，只是命名和存放的位置可能不同。</p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/posts/faacf0ed.html'>
-            Read More
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名（zengxin）-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://zengxinxin.cn/posts/faacf0ed.html>http://zengxinxin.cn/posts/faacf0ed.html</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-12-29T15:31:04+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Dec 29, 2020</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
+          
   
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/4d70ad40.html">
-        Hexo设置永久链接
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/hexo%E9%97%AE%E9%A2%98%E5%90%88%E9%9B%86/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>hexo问题合集</p></a></div>
+
+
+        
       
         
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://zengxinxin.cn/posts/faacf0ed.html&title=Hexo分类和标签无法显示问题 - Love me, love my dog.&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://zengxinxin.cn/posts/faacf0ed.html&title=Hexo分类和标签无法显示问题 - Love me, love my dog.&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://zengxinxin.cn/posts/faacf0ed.html&title=Hexo分类和标签无法显示问题 - Love me, love my dog.&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/4d70ad40.html'>
+          <p class='title'>Hexo设置永久链接<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
 安装插件在hexo根目录打开 git bash 安装插件
 npm install hexo-abbrlink --save
 配置修改根目录站点配置文件_config.yml，改为：
-url: http://zengxinxin.cn  #填写个人绑定的网站，否则无法进站
-permalink: posts/:abbrlink.html
-abbrlink:
-  alg: crc32  # 算法...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-25</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Hexo%E6%95%99%E7%A8%8B/">Hexo教程</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/4d70ad40.html'>
-            Read More
-          </a>
-        </div>
+url: ...</p>
+        </a>
       
     </div>
   
+</article>
 
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/posts/c2421e8f.html">
-        首篇文章
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        测试文章
+  </article>
 
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2020-12-23</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%B5%8B%E8%AF%95/">测试</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/posts/c2421e8f.html'>
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
 
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+
 
 
 </div>
@@ -600,126 +629,22 @@ abbrlink:
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Love me, love my dog.</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:1633833317@qq.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/about/"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Hexo%E6%95%99%E7%A8%8B/" href="/categories/Hexo%E6%95%99%E7%A8%8B/"
-            id="categoriesHexoE69599E7A88B"
-            ><div class='name'>Hexo教程</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%B5%8B%E8%AF%95/" href="/categories/%E6%B5%8B%E8%AF%95/"
-            id="categoriesE6B58BE8AF95"
-            ><div class='name'>测试</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A3%B9"><span class="toc-text">壹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%B0"><span class="toc-text">贰</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%81"><span class="toc-text">叁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%82%86"><span class="toc-text">肆</span></a></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/hexo%E9%97%AE%E9%A2%98%E5%90%88%E9%9B%86/" style="font-size: 24px; color: #555">hexo问题合集</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 14px; color: #999">测试</a>
-    </div>
-  </section>
-
-
-  
 
   
 
@@ -735,14 +660,14 @@ abbrlink:
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="Hexo分类和标签无法显示问题";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
 </script>
 
