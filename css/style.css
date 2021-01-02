@@ -2331,11 +2331,14 @@ article#comments #valine_container .vwrap .vedit .vctrl span {
   padding: 0;
   margin: 10px;
 }
-article#comments #valine_container .vwrap .vedit span {
+article#comments #valine_container no-repeat {
   fill: var(--color-p);
 }
-article#comments #valine_container .vwrap .vedit span.actived {
+article#comments #valine_container no-repeat.actived {
   fill: #44d7b6;
+}
+article#comments #valine_container .veditor {
+  background: url("https://cdn.jsdelivr.net/gh/zyoushuo/Blog/images/valinebg.webp") 100% 100% no-repeat;
 }
 article#comments #valine_container .vcount {
   color: var(--color-p);
