@@ -450,6 +450,11 @@
 				</ul>
 			</div>
 
+            <div id="weather"></div>
+            <script src="https://cdn.jsdelivr.net/gh/w4j1e/blog@master/js/tqa.js"></script>
+
+
+
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fas fa-search fa-fw"></i>
@@ -831,6 +836,7 @@
 		</div>
 	</div>
   </div>
+  
 </header>
 
   <div id="l_body">
@@ -1012,7 +1018,7 @@ http://zengxinxin.cn/posts/undefined.html</code></pre>
           <blockquote>
             
               
-                <p>博客内容遵循 署名（zengxin）-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
 
               
             
@@ -1140,6 +1146,14 @@ $ hexo new ...</p>
     
     <div id="valine_container" class="valine_thread">
   <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+   <!-- valine 添加一言 -->
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script type="text/javascript">
+     jinrishici.load(function(result) {
+     var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
+     document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
+      });
+ </script>
 </div>
 
   </article>
@@ -1524,7 +1538,7 @@ var loadCSS = function( href, before, media, attributes ){
 
   
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.2.0/source/js/valine.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js"></script>
 
 
 <script>
@@ -1561,7 +1575,7 @@ var loadCSS = function( href, before, media, attributes ){
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
 
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "";
 
     let path = pdata.commentPath;
     if (path.length == 0) {
@@ -1575,8 +1589,8 @@ var loadCSS = function( href, before, media, attributes ){
       meta: meta,
       placeholder: pagePlaceholder,
       path: path,
-      appId: "",
-      appKey: "",
+      appId: "hkKJmR5ulJs581ySScwEAcJT-gzGzoHsz",
+      appKey: "0lHlc8VbA8dCBljLYmR178ov",
       pageSize: '10',
       avatar: 'robohash',
       lang: 'zh-cn',

@@ -448,6 +448,11 @@
 				</ul>
 			</div>
 
+            <div id="weather"></div>
+            <script src="https://cdn.jsdelivr.net/gh/w4j1e/blog@master/js/tqa.js"></script>
+
+
+
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fas fa-search fa-fw"></i>
@@ -829,6 +834,7 @@
 		</div>
 	</div>
   </div>
+  
 </header>
 
   <div id="l_body">
@@ -1320,7 +1326,7 @@ var loadCSS = function( href, before, media, attributes ){
 
   
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.2.0/source/js/valine.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js"></script>
 
 
 <script>
@@ -1357,7 +1363,7 @@ var loadCSS = function( href, before, media, attributes ){
   function pjax_valine() {
     if(!document.querySelectorAll("#valine_container")[0])return;
 
-    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let pagePlaceholder = pdata.commentPlaceholder || "";
 
     let path = pdata.commentPath;
     if (path.length == 0) {
@@ -1371,8 +1377,8 @@ var loadCSS = function( href, before, media, attributes ){
       meta: meta,
       placeholder: pagePlaceholder,
       path: path,
-      appId: "",
-      appKey: "",
+      appId: "hkKJmR5ulJs581ySScwEAcJT-gzGzoHsz",
+      appKey: "0lHlc8VbA8dCBljLYmR178ov",
       pageSize: '10',
       avatar: 'robohash',
       lang: 'zh-cn',
