@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>个人收藏</title>
+      <link href="posts/8ba3041c.html"/>
+      <url>posts/8ba3041c.html</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://volantis.js.org/tag-plugins/">Volantis 专用标签</a><br>首页文章的头图怎么添加？<br>在md文章头部的frontmater里面添加headimg: 链接地址</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo设置永久链接</title>
+      <link href="posts/4d70ad40.html"/>
+      <url>posts/4d70ad40.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>在hexo根目录打开 git bash 安装插件</p><pre><code>npm install hexo-abbrlink --save</code></pre><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>修改根目录站点配置文件_config.yml，改为：</p><pre><code>url: http://zengxinxin.cn  #填写个人绑定的网站，否则无法进站permalink: posts/:abbrlink.htmlabbrlink:  alg: crc32  # 算法：crc16(default) and crc32  rep: hex  # 进制：dec(default) and hex</code></pre><p>生成后连接示例：</p><pre><code>crc32 &amp; hexhttp://zengxinxin.cn/posts/undefined.html</code></pre><p>生成完后，原md文件的Front-matter 内会增加abbrlink 字段，值为生成的ID 。这个字段确保了在我们修改了Front-matter 内的博客标题title或创建日期date字段之后而不会改变链接地址。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo问题合集 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo分类和标签无法显示问题</title>
+      <link href="posts/faacf0ed.html"/>
+      <url>posts/faacf0ed.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="壹"><a href="#壹" class="headerlink" title="壹"></a>壹</h2><p> -下面以添加tag页面为例：</p><p>需要在hexo根目录的source文件夹下新建一个tags文件夹，然后在tags文件夹里面新建一个index.md文件。<br>快捷命令为: </p><blockquote><p><code>$ hexo new page &quot;tags&quot;</code></p></blockquote><h2 id="贰"><a href="#贰" class="headerlink" title="贰"></a>贰</h2><p> -编辑index.md文件</p><p>首部内容示例：</p><blockquote><p><em>—</em><br>title: “tags”<br>type: tags<br>layout: “tags”<br><em>—</em></p></blockquote><p><font color="red"><strong>重点注意！</strong></font></p><blockquote><p>这里面最重要的就是<font color="blue"> <em>layout 选项</em>，</font><br>后面的参数对应的是你主题文件夹(themes文件夹)下<font color="blue"> <em>layout文件夹</em></font>下第一级的布局文件。<br>比如，我的主题是用ejs写的，那么对应的就是<font color="blue">layout/tags.ejs</font><br>如果没有，那么就会出现空白的现象！<br>如果你的tags文件的命名时<font color="blue">tag.ejs</font><br>那么你就应该写成 <font color="blue">layout: “tag”</font></p></blockquote><h2 id="叁"><a href="#叁" class="headerlink" title="叁"></a>叁</h2><p> -主题配置</p><p>在菜单中添加链接。编辑主题配置文件（<font color="blue">themes\你的主题\ _config.yml</font>） ，添加 tags 到 menu 中</p><blockquote><p>menu:<br>  home: /<br>  archives: /archives<br>  tags: /tags</p></blockquote><h2 id="肆"><a href="#肆" class="headerlink" title="肆"></a>肆</h2><p>  -编辑hexo配置文件</p><p>配置Directory选项<br>检查一下名称是否对应</p><blockquote><p>Directory<br>tag_dir: tags</p></blockquote><p>最重要的就是看一下你的主题文件里有没有标签页或者分类页的布局文件，一般来说都是有的，只是命名和存放的位置可能不同。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo问题合集 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

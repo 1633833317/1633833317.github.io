@@ -58,7 +58,7 @@
 <body>
   
 
-<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -837,7 +837,7 @@
     <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  search' style="display: none;">
+        <div id="half" class='cover-wrapper  search' style="display: ;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://wallpaperm.cmcm.com/2d6a574669e918214836371511fea5b8.jpg"></div>
           
@@ -918,18 +918,20 @@
       
         
           
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
+            <div class='post-wrapper'>
+              <div class="post post-v3 white-box reveal shadow">
   
   
+    <div class='pin'>
+      <img src='https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4cc.svg'/>
+    </div>
+  
+  
+    <div class='headimg-div'>
+      <a class='headimg-a' href="/posts/4d70ad40.html">
+        <img class='headimg' src='https://s3.ax1x.com/2020/12/26/r4sU0S.png'/>
+      </a>
+    </div>
   
   
     
@@ -942,14 +944,13 @@
   <div class='md'>
     
       
-        
-安装插件在hexo根目录打开 git bash 安装插件
+        安装插件在hexo根目录打开 git bash 安装插件
 npm install hexo-abbrlink --save
 配置修改根目录站点配置文件_config.yml，改为：
 url: http://zengxinxin.cn  #填写个人绑定的网站，否则无法进站
 permalink: posts/:abbrlink.html
 abbrlink:
-  alg: crc32  # 算法...
+  alg: crc32  # 算法：...
       
     
   </div>
@@ -975,7 +976,15 @@ abbrlink:
 
 </div>
 
-          </div>
+            </div>
+          
+        
+          
+        
+      
+    
+    
+      
         
       
         
@@ -983,6 +992,12 @@ abbrlink:
             <div class="post post-v3 white-box reveal shadow">
   
   
+  
+    <div class='headimg-div'>
+      <a class='headimg-a' href="/posts/faacf0ed.html">
+        <img class='headimg' src='https://s3.ax1x.com/2020/12/29/rHIAnf.jpg'/>
+      </a>
+    </div>
   
   
     
@@ -995,8 +1010,7 @@ abbrlink:
   <div class='md'>
     
       
-        
-壹 -下面以添加tag页面为例：
+        壹 -下面以添加tag页面为例：
 需要在hexo根目录的source文件夹下新建一个tags文件夹，然后在tags文件夹里面新建一个index.md文件。快捷命令为: 
 
 $ hexo new page &quot;tags&quot;
@@ -1008,7 +1022,7 @@ $ hexo new page &quot;tags&quot;
 
 重点注意！
 
-这里面...
+这里面最...
       
     
   </div>
@@ -1212,7 +1226,7 @@ $ hexo new page &quot;tags&quot;
 
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.add("show");
+  l_header.classList.remove("show");
   
 </script>
 
@@ -1562,7 +1576,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 $('.input.u-search-input').one('focus',function(){
 	
-		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.2.0/source/js/search/hexo.min.js',setSearchService);
+		loadScript('https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2.6.4/js/search.js',setSearchService);
 	
 })
 
