@@ -517,8 +517,8 @@
         t.defaultConfig = {
             lang: "zh-CN",
             langMode: null,
-            appId: "",
-            appKey: "",
+            appId: "hkKJmR5ulJs581ySScwEAcJT-gzGzoHsz",
+            appKey: "0lHlc8VbA8dCBljLYmR178ov",
             clazzName: "Comment",
             meta: ["nick", "mail", "link"],
             path: location.pathname,
@@ -531,6 +531,7 @@
             emojiMaps: void 0,
             enableQQ: !1,
             requiredFields: []
+			
         },
         t.defaultMeta = ["nick", "mail", "link"],
         t.QQCacheKey = "_v_Cache_Q",
