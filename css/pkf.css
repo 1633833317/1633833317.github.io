@@ -3,7 +3,7 @@ div.me2 {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #F8F005;
+  background-color: #fafafa;
 }
 
 button, button::after {
