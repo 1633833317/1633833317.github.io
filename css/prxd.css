@@ -18,6 +18,11 @@ li.stacks2{
     margin: 0 10px;
 }
 
+
+.md ul>li {
+    list-style: none;
+}
+
 li.stacks2:nth-child(1){
     background-color: red;
     animation: love1 5s 0s infinite;
