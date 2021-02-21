@@ -19,7 +19,7 @@ li.stacks2{
 }
 
 
-.md ul>li {
+.md ul>li.stacks2 {
     list-style: none;
 }
 
