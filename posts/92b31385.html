@@ -19,7 +19,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>Love me, love my dog.</title>
+  <title>CSS盒模型完整介绍 - Love me, love my dog.</title>
+  
+    <meta name="keywords" content="前端笔记">
   
 
   
@@ -941,7 +943,7 @@
     <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper categories search' style="display: ;">
+        <div id="half" class='cover-wrapper post search' style="display: ;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://wallpaperm.cmcm.com/2d6a574669e918214836371511fea5b8.jpg"></div>
           
@@ -1020,40 +1022,275 @@
         
 
 <div class='l_main'>
-  <article class="article post white-box reveal md shadow article-type-categories" id="categories" itemscope itemprop="blogPost">
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
 
 
+  
+    <div class='headimg-div'>
+      <a class='headimg-a'>
+        <img class='headimg' src='https://tva1.sinaimg.cn/large/9bd9b167gy1g4lhmukjpfj21hc0xc1b9.jpg'/>
+      </a>
+    </div>
   
   <div class="article-meta" id="top">
     
     
+      <a title='CSS盒模型完整介绍' href='/posts/92b31385.html'>
+        <img class='thumbnail' src='https://tva1.sinaimg.cn/large/9bd9b167gy1g4lhmukjpfj21hc0xc1b9.jpg'>
+      </a>
+    
+    
+      <h1 class="title">
+        CSS盒模型完整介绍
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' href="/" rel="nofollow">
+    <img no-lazy src="">
+    <p>zengxin</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/CSS/">CSS</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年5月19日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="CSS盒模型完整介绍" data-path="/posts/92b31385.html">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
     
   </div>
 
 
   
-  <p class='p center small'>单人副本详细介绍</p>
+  <h2 id="盒模型的认识"><a href="#盒模型的认识" class="headerlink" title="盒模型的认识"></a>盒模型的认识</h2><ol>
+<li>基本概念：标准模型+IE模型。 包括margin,border,padding,content</li>
+<li>标准模型和IE模型的区别</li>
+<li>css如何设置获取这两种模型的宽和高</li>
+<li>js如何设置获取盒模型对应的宽和高</li>
+<li>根据盒模型解释边距重叠</li>
+<li>BFC（边距重叠解决方案，还有IFC）解决边距重叠</li>
+</ol>
+<h2 id="基本概念：标准模型-IE模型"><a href="#基本概念：标准模型-IE模型" class="headerlink" title="基本概念：标准模型+IE模型"></a>基本概念：标准模型+IE模型</h2><p><strong> 什么是盒模型： </strong>盒模型又称框模型（Box Model）,包含了元素内容（content）、内边距（padding）、边框（border）、外边距（margin）几个要素。如图：</p>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://z3.ax1x.com/2021/05/19/g4i4a9.png" class="lazyload" data-srcset="https://z3.ax1x.com/2021/05/19/g4i4a9.png" srcset="data:image/png;base64,666" alt="盒子模型示意图"/></div><span class="image-caption">盒子模型示意图</span></div>
 
-<h2 id="试练塔"><a href="#试练塔" class="headerlink" title="试练塔"></a>试练塔</h2><blockquote>
-<p>一共200层 前期最好打到150层。尽可能的打S评分。因为到后期你战力上去了就是脱装备都能秒怪，你就达不成任务要求了，你会求怪别死。<br><br><br>每天都可以扫荡一次，别忘记。试练塔收入的材料是用来魔法修炼的。小水晶是用来升级的。大水晶是用来突破等级的。修炼的话平均升级就好。<br><br><br>特殊几关卡的通过视频如下↓</p>
-</blockquote>
-<div class="tabs" id="sltsp"><ul class="nav-tabs"><li class="tab active"><a class="#sltsp-1">6层s打法</a></li><li class="tab"><a class="#sltsp-2">7层s打法</a></li><li class="tab"><a class="#sltsp-3">16层s打法</a></li><li class="tab"><a class="#sltsp-4">23 53层s打法</a></li><li class="tab"><a class="#sltsp-5">34层s打法</a></li><li class="tab"><a class="#sltsp-6">54层s打法</a></li><li class="tab"><a class="#sltsp-7">其他层s打法</a></li></ul><div class="tab-content"><div class="tab-pane active" id="sltsp-1"><iframe height="600px" width="100%" src="//player.bilibili.com/player.html?aid=927690334&bvid=BV1ST4y1F7f3&cid=252970679&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></div><div class="tab-pane" id="sltsp-2"><iframe height="600px" width="100%" src="//player.bilibili.com/player.html?aid=627707521&bvid=BV1qt4y1e74m&cid=252972292&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></div><div class="tab-pane" id="sltsp-3"><p>反抛帝</p></div><div class="tab-pane" id="sltsp-4"><iframe height="600px" width="100%" src="//player.bilibili.com/player.html?aid=412547096&bvid=BV1HV411f7So&cid=172306154&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></div><div class="tab-pane" id="sltsp-5"><iframe height="600px" width="100%" src="//player.bilibili.com/player.html?aid=455124211&bvid=BV1f5411475M&cid=172307638&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></div><div class="tab-pane" id="sltsp-6"><p>反抛帝+精准</p></div><div class="tab-pane" id="sltsp-7"><p>还有不会的请联系博主或者留言进行更新。</p></div></div></div>
+<h2 id="标准模型和IE模型的区别"><a href="#标准模型和IE模型的区别" class="headerlink" title="标准模型和IE模型的区别"></a>标准模型和IE模型的区别</h2><p>IE模型和标准模型唯一的区别是内容计算方式的不同，如下图所示：</p>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://z3.ax1x.com/2021/05/19/g4Faz6.png," class="lazyload" data-srcset="https://z3.ax1x.com/2021/05/19/g4Faz6.png," srcset="data:image/png;base64,666"/></div></div>
+<span class='p center'>IE模型元素宽度width=content+padding，高度计算相同</span>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://z3.ax1x.com/2021/05/19/g4FBLD.png," class="lazyload" data-srcset="https://z3.ax1x.com/2021/05/19/g4FBLD.png," srcset="data:image/png;base64,666"/></div></div>
+<span class='p center'>标准模型元素宽度width=content，高度计算相同</span>
 
+<h2 id="css如何设置获取这两种模型的宽和高"><a href="#css如何设置获取这两种模型的宽和高" class="headerlink" title="css如何设置获取这两种模型的宽和高"></a>css如何设置获取这两种模型的宽和高</h2><ul>
+<li>通过css3新增的属性 <span class="p blue">box-sizing: content-box | border-box</span>分别设置盒模型为标准模型（<span class="p blue">content-box</span>）和IE模型（<span class="p blue">border-box</span>）。<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.content-box</span> &#123;</span><br><span class="line">  <span class="attribute">box-sizing</span>:content-box;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">5px</span> solid red;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://z3.ax1x.com/2021/05/19/g4FgJI.png," class="lazyload" data-srcset="https://z3.ax1x.com/2021/05/19/g4FgJI.png," srcset="data:image/png;base64,666"/></div></div>
+<span class="p blue">.content-box</span>设置为标准模型，它的元素宽度width=100px。</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.border-box</span> &#123;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">5px</span> solid red;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://z3.ax1x.com/2021/05/19/g4kif1.png," class="lazyload" data-srcset="https://z3.ax1x.com/2021/05/19/g4kif1.png," srcset="data:image/png;base64,666"/></div></div>
+<p><span class="p blue">.border-box</span>设置为IE模型，它的元素宽度width=content + 2 padding + 2 border = 70px + 2 10px + 2 5px = 100px。</p>
+<h2 id="javascript如何设置获取盒模型对应的宽和高"><a href="#javascript如何设置获取盒模型对应的宽和高" class="headerlink" title="javascript如何设置获取盒模型对应的宽和高"></a>javascript如何设置获取盒模型对应的宽和高</h2><ol>
+<li>dom.style.width/height 只能取到行内样式的宽和高，style标签中和link外链的样式取不到。</li>
+<li>dom.currentStyle.width/height 取到的是最终渲染后的宽和高，只有IE支持此属性。</li>
+<li>window.getComputedStyle(dom).width/height 同（2）但是多浏览器支持，IE9以上支持。</li>
+<li>dom.getBoundingClientRect().width/height 也是得到渲染后的宽和高，大多浏览器支持。IE9以上支持，除此外还可以取到相对于视窗的上下左右的距离</li>
+</ol>
+<p>以上API在浏览器中测试过，有兴趣可以都试一下</p>
+<h2 id="外边距重叠"><a href="#外边距重叠" class="headerlink" title="外边距重叠"></a>外边距重叠</h2><p>当两个垂直外边距相遇时，他们将形成一个外边距，合并后的外边距高度等于两个发生合并的外边距的高度中的较大者。<br><span class="p red">注意</span>：只有普通文档流中块框的垂直外边距才会发生外边距合并，行内框、浮动框或绝对定位之间的外边距不会合并。</p>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://z3.ax1x.com/2021/05/19/g4kE6K.png," class="lazyload" data-srcset="https://z3.ax1x.com/2021/05/19/g4kE6K.png," srcset="data:image/png;base64,666"/></div></div>
 
-
-
-
-<h2 id="天外魔境"><a href="#天外魔境" class="headerlink" title="天外魔境"></a>天外魔境</h2><blockquote>
-<p>翅膀和材料的主要来源，每天可以打5次。三星通关可以一键扫荡。力天使在第16关，每周要手动打一次你能打的最高层。有每周奖励。其他时间可以一键扫荡。<br>不要把材料和金币浪费在小天使身上。划不来。<br> <span class="p red">注意：不是一定要打到三星。通关了就可以。火力等级不够的先扫荡提升等级。！</span><br><br><br>特殊几关卡的通过视频如下↓</p>
-</blockquote>
-<div class="tabs" id="twmjsp"><ul class="nav-tabs"><li class="tab active"><a class="#twmjsp-1">XX层</a></li></ul><div class="tab-content"><div class="tab-pane active" id="twmjsp-1"><p>有不会的关卡请联系博主或者留言进行更新。</p></div></div></div>
+<p><span class="p blue">例子</span>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;section id&#x3D;&quot;sec&quot;&gt;</span><br><span class="line">     &lt;style media&#x3D;&quot;screen&quot;&gt;</span><br><span class="line">         * &#123;</span><br><span class="line">             margin: 0;</span><br><span class="line">             padding: 0;</span><br><span class="line">         &#125;</span><br><span class="line">         #sec &#123;</span><br><span class="line">             background: #f00;</span><br><span class="line">         &#125;</span><br><span class="line">         .child &#123;</span><br><span class="line">             height: 100px;</span><br><span class="line">             margin-top: 10px;</span><br><span class="line">             background: yellow;</span><br><span class="line">         &#125;</span><br><span class="line">     &lt;&#x2F;style&gt;</span><br><span class="line">     &lt;article class&#x3D;&quot;child&quot;&gt;&lt;&#x2F;article&gt;</span><br><span class="line"> &lt;&#x2F;section&gt;</span><br></pre></td></tr></table></figure>
+<p>这里父元素section的高度是多少呢，100px，但是我们给section设置overflow:hidden后高度就变成110px，这是为什么呢，其实这里我们给父元素创建了BFC。，什么是BFC,请看下面的介绍。</p>
+<h2 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a>BFC</h2><ul>
+<li>BFC(Block Formatting Context)：块级格式化上下文。<br>BFC决定了元素如何对其内容进行定位，以及与其他元素的关系和相互作用。当设计到可视化布局的时候，BFC提供了一个环境，HTML元素在这个环境中按照一定的规则进行布局。一个环境中的元素不会影响到其他环境中的布局。</li>
+<li>BFC的原理（渲染规则）</li>
+</ul>
+<ol>
+<li>BFC元素垂直方向的边距会发生重叠。属于不同BFC外边距不会发生重叠</li>
+<li>BFC的区域不会与浮动元素的布局重叠。</li>
+<li>BFC元素是一个独立的容器，外面的元素不会影响里面的元素。里面的元素也不会影响外面的元素。</li>
+<li>计算BFC高度的时候，浮动元素也会参与计算(清除浮动)</li>
+</ol>
+<ul>
+<li>如何创建BFC</li>
+</ul>
+<ol>
+<li>overflow不为visible;</li>
+<li>float的值不为none；</li>
+<li>position的值不为static或relative；</li>
+<li>display属性为inline-blocks,table,table-cell,table-caption,flex,inline-flex;</li>
+</ol>
+<p>示例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">id</span>=<span class="string">&quot;margin&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">        * &#123;</span><br><span class="line">            padding: 0;</span><br><span class="line">            margin: 0;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="css">        <span class="selector-id">#margin</span> &#123;</span></span><br><span class="line">            background: pink;</span><br><span class="line">            overflow: hidden;</span><br><span class="line">        &#125;</span><br><span class="line">        p &#123;</span><br><span class="line">            margin: 15px auto 25px;</span><br><span class="line">            background: red;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>1<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;overflow: hidden&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>2<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>3<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>4<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>请看这里的第二个p元素<code>&lt;p&gt;2&lt;/p&gt;</code>他被一个父元素包裹，并且父元素有 <code>overflow:hidden</code> 样式，前面的如何创建BFC的第一条就说了 <code>overflow:hidden</code> 可以创建一个BFC。结果如下图所示。</p>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://z3.ax1x.com/2021/05/19/g4kBpq.png" class="lazyload" data-srcset="https://z3.ax1x.com/2021/05/19/g4kBpq.png" srcset="data:image/png;base64,666"/></div></div>
+<p>我们看这里的2，它的上下外边距都没有与1和3发生重叠，但3与4外边距发生了重叠。这就解释了BFC创建了一个独立的环境，这个环境中的元素不会影响到其他环境中的布局，所以BFC内的外边距不与外部的外边距发生重叠。</p>
+<p>再看看下面的列子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;section id&#x3D;&quot;layout&quot;&gt;</span><br><span class="line">    &lt;style media&#x3D;&quot;screen&quot;&gt;</span><br><span class="line">        #layout &#123;</span><br><span class="line">            background: red;</span><br><span class="line">        &#125;</span><br><span class="line">        #layout .left &#123;</span><br><span class="line">            float: left;</span><br><span class="line">            width: 100px;</span><br><span class="line">            height: 100px;</span><br><span class="line">            background: pink;</span><br><span class="line">        &#125;</span><br><span class="line">        #layout .right &#123;</span><br><span class="line">            height: 110px;</span><br><span class="line">            background: #ccc;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;&#x2F;style&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;left&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;right&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;section&gt;</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://z3.ax1x.com/2021/05/19/g4kD10.png," class="lazyload" data-srcset="https://z3.ax1x.com/2021/05/19/g4kD10.png," srcset="data:image/png;base64,666"/></div></div>
+<p>写过前端页面的我们肯定遇到过这种情况，这里其实是浮动元素叠在 <code>.right</code> 元素的上面，如果我们想让<code>.right</code>元素不会延伸到 float元素怎么办,其实我们在<code>.right</code>元素上加 <code>overflow:hidden</code> （用其他的方式创建BFC也可以）创建BFC就可以解决。因为BFC不会与浮动元素发生重叠。</p>
+<div class="img-wrap"><div class="img-bg"><img class="img lazyload" src="https://z3.ax1x.com/2021/05/19/g4krcV.png," class="lazyload" data-srcset="https://z3.ax1x.com/2021/05/19/g4krcV.png," srcset="data:image/png;base64,666"/></div></div>
+<p>还有一种情况很常见，就是由于子元素浮动，导致父元素的高度不会把浮动元素算在内，那么我们在父元素创建BFC就可以让可以让浮动元素也参与高度计算。</p>
 
   
   
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://zengxinxin.cn/posts/92b31385.html>http://zengxinxin.cn/posts/92b31385.html</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-05-19T02:43:40+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2021年5月19日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>前端笔记</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://zengxinxin.cn/posts/92b31385.html&title=CSS盒模型完整介绍 - Love me, love my dog.&pics=https://tva1.sinaimg.cn/large/9bd9b167gy1g4lhmukjpfj21hc0xc1b9.jpg&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://zengxinxin.cn/posts/92b31385.html&title=CSS盒模型完整介绍 - Love me, love my dog.&pics=https://tva1.sinaimg.cn/large/9bd9b167gy1g4lhmukjpfj21hc0xc1b9.jpg&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://zengxinxin.cn/posts/92b31385.html&title=CSS盒模型完整介绍 - Love me, love my dog.&pics=https://tva1.sinaimg.cn/large/9bd9b167gy1g4lhmukjpfj21hc0xc1b9.jpg&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
   
   
 
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/posts/4925a7e0.html'>
+          <p class='title'>理解行内元素和块级元素<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>行内元素 常见的span、a、lable、strong、b等html标签都是行内元素
+1a, span, label, strong, em, br, img, input, select, t...</p>
+        </a>
+      
+    </div>
   
 </article>
 
@@ -1170,7 +1407,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%95%E7%BB%83%E5%A1%94"><span class="toc-text">试练塔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A9%E5%A4%96%E9%AD%94%E5%A2%83"><span class="toc-text">天外魔境</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%AE%A4%E8%AF%86"><span class="toc-text">盒模型的认识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%EF%BC%9A%E6%A0%87%E5%87%86%E6%A8%A1%E5%9E%8B-IE%E6%A8%A1%E5%9E%8B"><span class="toc-text">基本概念：标准模型+IE模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E6%A8%A1%E5%9E%8B%E5%92%8CIE%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">标准模型和IE模型的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E8%8E%B7%E5%8F%96%E8%BF%99%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%AE%BD%E5%92%8C%E9%AB%98"><span class="toc-text">css如何设置获取这两种模型的宽和高</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#javascript%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E8%8E%B7%E5%8F%96%E7%9B%92%E6%A8%A1%E5%9E%8B%E5%AF%B9%E5%BA%94%E7%9A%84%E5%AE%BD%E5%92%8C%E9%AB%98"><span class="toc-text">javascript如何设置获取盒模型对应的宽和高</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%96%E8%BE%B9%E8%B7%9D%E9%87%8D%E5%8F%A0"><span class="toc-text">外边距重叠</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BFC"><span class="toc-text">BFC</span></a></li></ol>
     </div>
   </section>
 
@@ -1189,8 +1426,8 @@
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="CSS盒模型完整介绍";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
